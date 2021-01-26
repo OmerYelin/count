@@ -1,0 +1,136 @@
+import sys
+import time
+
+
+def choose_calc():
+    choose = str(input("What calculation do you want to do?\n'+' for addition\n'-' for subtraction\n'*' for multiplication\n'/' for division.\n\n"))
+
+    if choose == '+':
+        print("You chose addition")
+        calculator_add()
+        sys.exit()
+
+    elif choose == '-':
+         print("You chose subtraction")
+         calculator_sub()
+         sys.exit()
+
+    elif choose == '*':
+         print("You chose multiplication")
+         calculator_mul()
+         sys.exit()
+
+    elif choose == '/':
+         print("You chose division")
+         calculator_dev()
+         sys.exit()
+
+
+
+def calculator_add():
+    while True:
+        number_1 = float(input("Please write the first number\n"))
+        number_2 = float(input("Please write the second number\n"))
+        print("The numbers you chose are %d" % number_1, number_2)
+        equal = (number_1+number_2)
+        print("It equals %f" % equal)
+        ask_continue = str(input("Do you want to continue? Write yes/no.\n"))
+        if ask_continue == 'yes':
+            choose_calc()
+        elif ask_continue == 'no':
+            print("Ok, thank you for using my calculator!")
+        else:
+            yes_or_no = input("Please write 'yes' or 'no'.\n")
+            if yes_or_no == 'yes':
+                choose_calc()
+            elif yes_or_no == 'no':
+                print("Ok, thank you for using my calculator!")
+            else:
+                yes_or_no = input("Please write 'yes' or 'no'.\n")
+                if yes_or_no == 'yes':
+                    choose_calc()
+                elif yes_or_no == 'no':
+                    print("Ok, thank you for using my calculator!")
+
+            sys.exit()
+        break
+
+def calculator_sub():
+    while True:
+        number_1 = float(input("Please write the first number\n"))
+        number_2 = float(input("Please write the second number\n"))
+        print("The numbers you chose are %d" % number_1, number_2)
+        equal = (number_1-number_2)
+        print("It equals %f" % equal)
+        ask_continue = str(input("Do you want to continue? Write yes/no.\n"))
+        if ask_continue == 'yes':
+            choose_calc()
+        elif ask_continue == 'no':
+            print("Ok, thank you for using my calculator!")
+        else:
+            yes_or_no = input("Please write 'yes' or 'no'.\n")
+            if yes_or_no == 'yes':
+                choose_calc()
+            elif yes_or_no == 'no':
+                print("Ok, thank you for using my calculator!")
+            else:
+                input("Please write 'yes' or 'no'.\n")
+
+            sys.exit()
+        break
+
+def calculator_mul():
+    while True:
+        number_1 = float(input("Please write the first number\n"))
+        number_2 = float(input("Please write the second number\n"))
+        print("The numbers you chose are %d" % number_1, number_2)
+        equal = (number_1*number_2)
+        print("It equals %f" % equal)
+        ask_continue = str(input("Do you want to continue? Write yes/no.\n"))
+        if ask_continue == 'yes':
+            choose_calc()
+        elif ask_continue == 'no':
+            print("Ok, thank you for using my calculator!")
+        else:
+            yes_or_no = input("Please write 'yes' or 'no'.\n")
+            if yes_or_no == 'yes':
+                choose_calc()
+            elif yes_or_no == 'no':
+                print("Ok, thank you for using my calculator!")
+            else:
+                input("Please write 'yes' or 'no'.\n")
+
+            sys.exit()
+        break
+
+def calculator_dev():
+    while True:
+        number_1 = float(input("Please write the first number\n"))
+        number_2 = float(input("Please write the second number\n"))
+        print("The numbers you chose are %d" % number_1, number_2)
+        equal = (number_1/number_2)
+        print("It equals %f" % equal)
+        ask_continue = str(input("Do you want to continue? Write yes/no.\n"))
+        if ask_continue == 'yes':
+            choose_calc()
+        elif ask_continue == 'no':
+            print("Ok, thank you for using my calculator!")
+        else:
+            yes_or_no = input("Please write 'yes' or 'no'.\n")
+            if yes_or_no == 'yes':
+                choose_calc()
+            elif yes_or_no == 'no':
+                print("Ok, thank you for using my calculator!")
+            else:
+                input("Please write 'yes' or 'no'.\n")
+
+            sys.exit()
+        break
+
+
+
+choose_calc()
+calculator_add()
+calculator_sub()
+calculator_mul()
+calculator_dev()
